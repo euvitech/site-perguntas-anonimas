@@ -1,0 +1,52 @@
+.content {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 11.4rem 1fr;
+
+    grid-template-areas:
+     'header header'
+     'left right';
+}
+
+header {
+    grid-area: header;
+}
+
+#bg {
+    grid-area: left;
+
+    background: url('/assents/home-bg-img.svg') no-repeat top/contain; /*Corta a imagem no espaço da <div>*/
+}
+
+main {
+    grid-area: right; 
+
+    display: flex;
+    align-items: center;
+}
+
+main .container {
+    width: min(36.3rem 100%)
+}
+
+main h2 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--black);
+    font-size: clamp(20px, 5vw, 2.8rem);
+    margin-bottom: 2.4rem;
+    
+}
+
+button {
+    border-radius: .8rem;
+    height: 5rem;
+}
+
+input, button, .button {
+    width: 50.3rem;
+    margin: 1.8rem .1rem;
+
+    border: 0.2rem solid var(--grey);
+    padding: 0 .8rem;
+    box-sizing: border-box;
+}
