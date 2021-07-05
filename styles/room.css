@@ -148,6 +148,7 @@
 
 }
 
-.question-content .user > img{
-
+.question-wrapper .question-content .user{
+    background: var(--blue);
+    clip-path: circle();
 }
