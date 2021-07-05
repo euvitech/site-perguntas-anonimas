@@ -83,7 +83,7 @@ button:hover, .button:hover { /*Quando o mouse passar por cima do botão acontec
 
 }
 
-button > img 
+button > img,
 .button > img {
     margin-right: 1rem;
     width: 2rem;
@@ -93,7 +93,6 @@ button.outllined,
 .button.outllined {
     background: var(--white);
     color: var(--blue);
-    
     border: .2rem solid var(--blue);
 }
 
