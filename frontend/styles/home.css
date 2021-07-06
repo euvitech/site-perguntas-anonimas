@@ -47,6 +47,7 @@ button {
 input{
     border: .2rem solid var(--grey-medium);
     padding: 0 1.6rem;
+    outline: none;
 }
 
 input, button, .button {
