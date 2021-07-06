@@ -11,6 +11,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/room.css">
+    <link rel="stylesheet" href="styles/modal.css">
 
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -107,7 +108,7 @@
                     </div>
             </div>
 
-            <div class="question-wrapper">
+            <div class="question-wrapper read">
                 <div class="question-content">
                     <div class="user">
                         <img src="assents/icon-user.svg" alt="avatar">
@@ -119,11 +120,6 @@
                 </div>    
                     <div class="actions">
                         <a href="#">
-                            <img src="assents/check.svg" alt="Marcar como lida">
-                            Marcar como lida
-                        </a>
-
-                        <a href="#">
                             <img src="assents/trash.svg" alt="Excluir">
                             Excluir
                         </a>
@@ -131,6 +127,25 @@
             </div>
             </div>
         </div>
+
+        <!-- MODAL -->
+
+         <div class="modal-wrapper">
+             <div class="modal">
+                 <h2>Excluir pergunta</h2>
+                 <p>Têm certeza que deseja excluir esta pergunta?</p>
+
+                <form action="#" >
+                    <label class="sr-only" for-id="password">Digite sua senha admin</label>
+                    <input type="password" id="password" name="password" placeholder="digite sua senha"></input>
+
+                    <div class="buttons">
+                        <div class="button grey">Cancelar</div>
+                        <button class="red">Sim, excluir</button>
+                    </div>
+                </form>
+             </div>
+         </div>
     </section>
 </div>
 </body>

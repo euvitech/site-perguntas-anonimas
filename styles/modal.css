@@ -1,0 +1,27 @@
+.modal-wrapper {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+
+    background: rgba(4, 9, 17, .8);
+}
+
+.modal-wrapper .modal {
+    width: min(59rem, 90%);
+    background: var(--white);
+    margin: auto;
+
+    border-radius: .8rem;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+
+    padding: 6.4rem;
+    
+}
+
+.modal-wrapper .modal .buttons {
+    
+}

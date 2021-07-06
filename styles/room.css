@@ -107,12 +107,15 @@
 
 .question-wrapper .question-content {
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* deixa a linha alinhado ao topo */
 }
 
 .question-wrapper .question-content p{
    margin-left: 1.6rem;
-    
+   word-break: break-word; /* Quebra de linha pra baixo */
+   display: flex;
+   align-items: center;
+   min-height: 2.4rem;
 }
 
 .question-wrapper .actions {
@@ -124,6 +127,12 @@
 .question-wrapper .question-content {
     display: flex;
     align-items: center;
+}
+
+.question-wrapper .question-content .user{
+    background: var(--blue);
+    clip-path: circle();
+    padding: 1.4rem;
 }
 
 .question-wrapper .actions {
@@ -148,7 +157,11 @@
 
 }
 
-.question-wrapper .question-content .user{
-    background: var(--blue);
-    clip-path: circle();
+.question-wrapper.read {
+    background: var(--grey-opacity);
+
+}
+
+.question-wrapper.read .question-content .user {
+    background: var(--grey)
 }
