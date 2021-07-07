@@ -2,9 +2,9 @@
   "name": "NLW",
   "version": "1.0.0",
   "description": "Criado por Vinicius em uma aula da rocketseat",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
-    "start": "node src/server.js"
+    "start": "nodemon ."
   },
   "repository": {
     "type": "git",
