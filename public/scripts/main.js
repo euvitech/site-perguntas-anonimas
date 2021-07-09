@@ -30,7 +30,7 @@ function handleClick(event, check = true){
     const questionId = event.target.dataset.id
 
     const form = document.querySelector(".modal form")
-    form.setAttribute("action", `/room/${roomId}/${questionId}/${slug}`)
+    form.setAttribute("action", `/question/${roomId}/${questionId}/${slug}`)
 
     modalTitle.innerHTML = `${text} Esta pergunta`
     modalDescription.innerHTML = check ? `Tem certeza que deseja ${text.toLowerCase()} está pergunta como lida?` : "Tem certeza que deseja excluir esta pergunta?"
