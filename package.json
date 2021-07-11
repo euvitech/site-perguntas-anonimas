@@ -4,7 +4,8 @@
   "description": "Criado por Vinicius em uma aula da rocketseat",
   "main": "src/server.js",
   "scripts": {
-    "start": "nodemon ."
+    "start": "nodemon .",
+    "init-db": "node ../NLW/src/db/init.js"
   },
   "repository": {
     "type": "git",

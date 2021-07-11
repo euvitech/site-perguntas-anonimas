@@ -1,9 +1,8 @@
-const sqlite3 = require('sqlite3')
-const { open } = require('sqlite')
+const sqlite3 = require("sqlite3");
+const { open } = require("sqlite")
 
-module.exports = () => {
+module.exports = () => 
     open({
-        filename: '/src/db/datev.sqllite',
-        driver: sqllite3.Database
-    })
-}
+        filename: './src/db/datev.sqllite',
+        driver: sqlite3.Database,
+    });
