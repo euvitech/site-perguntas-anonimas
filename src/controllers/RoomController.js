@@ -13,7 +13,7 @@ module.exports = {
             roomid += Math.floor(Math.random() * 10).toString()
         }
 
-        /* check password */
+        /* check Id */
         const roomsExistIds = await db.all(`SELECT id FROM rooms`)
         isRoom = roomsExistIds.some(roomExistId => roomExistId === roomId )
         
@@ -30,12 +30,15 @@ module.exports = {
 
         }
 
-
-
-       
-
         await db.close()
 
         res.redirect(`/rooms/${roomid}`)
+    },
+
+    async open(req, res){
+        const roomId = req.params.room
+        const questions = await db.all(`SELECT * FROM questions WHERE room = ${roomId}`)
+
+        res.render("rooms", {roomid: roomId, question: questions})
     }
 }
