@@ -16,7 +16,7 @@ checkButtons.forEach (button => {
 
 const deleteButtons = document.querySelectorAll(".actions a.delete")
 
-deleteButtons.forEach (button =>{
+deleteButtons.forEach (button => {
     button.addEventListener ("click", (event) => handleClick(event, false))
 })
 

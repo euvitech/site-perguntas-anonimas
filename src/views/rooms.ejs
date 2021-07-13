@@ -31,8 +31,8 @@
     
 
     <div class="buttons">
-        <div class="button outllined" id="room-id" data-id="<%=roomid%>">
-            #<%=roomid%>
+        <div class="button outllined" id="room-id" data-id="<%=roomId%>">
+            #<%=roomId%>
             <img src="/images/copy.svg" alt=""/>
         </div>
 
@@ -45,7 +45,7 @@
 
     <section id="question-form">
         <h2>Faça sua pergunta</h2>
-        <form action="/question/create/<%= roomid %>" method="POST">
+        <form action="/question/create/<%= roomId %>" method="POST">
             <label class="sr-only" for="sr-only" for-id="question">
                 O que você quer perguntar
             </label>
@@ -65,78 +65,62 @@
         <h2 class="sr-only">Perguntas da comunidade</h2>
         <div class="questions">
 
+        <% questions.forEach(question => { %>
+
             <div class="question-wrapper">
                 <div class="question-content">
                     <div class="user">
                         <img src="/images/icon-user.svg" alt="avatar">
                     </div>
                     <div class="question">
-                      <p>  Qual a diferença entre const, var e let no javascript</p>
+                      <p><%= question.title %></p>
                     </div>
 
                 </div>    
-                    <div class="actions" class="check" data-id="2">
+                    <div class="actions" class="check" >
                         <a href="#" class="check">
                             <img src="/images/check.svg" alt="Marcar como lida">
                             Marcar como lida
                         </a>
 
-                        <a href="#" class="delete" data-id="2">
+                        <a href="#" class="delete" data-id="<%= question.id %>">
                             <img src="/images/trash.svg" alt="Excluir">
                             Excluir
                         </a>
                     </div>
             </div>
 
-            <div class="question-wrapper">
-                <div class="question-content">
-                    <div class="user">
-                        <img src="/images/icon-user.svg" alt="avatar">
-                    </div>
-                    <div class="question">
-                      <p>  O que é TypeScript?</p>
-                    </div>
-
-                </div>    
-                    <div class="actions">
-                        <a href="#" class="check" data-id="3">
-                            <img src="/images/check.svg" alt="Marcar como lida">
-                            Marcar como lida
-                        </a>
-
-                        <a href="#" class="delete" data-id="3">
-                            <img src="/images/trash.svg" alt="Excluir">
-                            Excluir
-                        </a>
-                    </div>
-            </div>
-
+            <% }); %>
+        
+        <% questionsRead.forEach(questionRead => { %>
             <div class="question-wrapper read">
                 <div class="question-content">
                     <div class="user">
                         <img src="/images/icon-user.svg" alt="avatar">
                     </div>
                     <div class="question">
-                      <p>  O que é ECMASCRIPT</p>
+                        <p><%= questionRead.title %></p>
                     </div>
 
                 </div>    
                     <div class="actions" >
-                        <a href="#" class="delete" data-id="1">
+                        <a href="#" class="delete" data-id="<%= questionRead.id %>">
                             <img src="/images/trash.svg" alt="Excluir">
                             Excluir
                         </a>
                     </div>
             </div>
-            </div>
-        </div>
+        <% }); %>
+        
+        
 
         <!-- MODAL -->
 
          <div class="modal-wrapper">
              <div class="modal">
                  <h2>Excluir pergunta</h2>
-                 <p>Têm certeza que deseja excluir esta pergunta?</p>
+                 
+                 <p></p>
                 
                 <form action="#" method="POST">
                     <label class="sr-only" for-id="password">Digite sua senha admin</label>
