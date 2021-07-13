@@ -34,7 +34,7 @@ function handleClick(event, check = true){
 
     modalTitle.innerHTML = `${text} Esta pergunta`
     modalDescription.innerHTML = check ? `Tem certeza que deseja ${text.toLowerCase()} está pergunta como lida?` : "Tem certeza que deseja excluir esta pergunta?"
-    modalButton.innerHTML = `Sim, ${text}`
+    modalButton.innerHTML = `Sim, ${text.toLowerCase()}`
     check ? modalButton.classList.remove("red") : modalButton.classList.add("red")
     modal.open()
 }
