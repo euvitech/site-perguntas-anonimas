@@ -24,7 +24,6 @@ module.exports = {
 
             }
 
-            await db.close()
         }
         
         res.redirect(`/rooms/${roomId}`)
