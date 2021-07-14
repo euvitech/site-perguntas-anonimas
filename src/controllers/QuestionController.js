@@ -23,10 +23,12 @@ module.exports = {
                 await db.run(`UPDATE questions SET read = 1 WHERE id = ${questionId}`)
 
             }
+            res.redirect(`/rooms/${roomId}`)
 
+        } else {
+            res.render('passincorrect', {rommId: roomId})
         }
         
-        res.redirect(`/rooms/${roomId}`)
     },
 
     async create(req, res){
