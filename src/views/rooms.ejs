@@ -25,7 +25,7 @@
 <body>
 <div id="room" class="content">
     <header>
-        <a href="/">
+        <a href="#">
             <img src="/images/logo.svg" alt="Rocket-Q - Logo" />
         </a>
     
@@ -36,7 +36,7 @@
             <img src="/images/copy.svg" alt=""/>
         </div>
 
-    <a href="#" class="button">
+    <a href="/create-pass" class="button">
         <img src="/images/users 2.svg" alt="">
         Criar sala
     </a>
@@ -64,6 +64,10 @@
     <section id="questions">
         <h2 class="sr-only">Perguntas da comunidade</h2>
         <div class="questions">
+
+            <% if (isNoQuestions){ %> 
+                <%- include('parts/no-question') %>
+            <% } %>
 
         <% questions.forEach(question => { %>
 
